@@ -1,3 +1,4 @@
+#guess the no.
 secret_number = 777
 number = int(input("Enter a number: "))
 while number != secret_number:
