@@ -8,6 +8,6 @@ if n < 85528:
 else:
     tax = 14839.02 + 0.32 * (n - 85528)
 if tax < 0:
-	tax = 0.0 #tax is 0
+	tax = 0.0  #tax  0
 tax = round(tax, 0)
 print("The tax is:", tax , "thalers")
