@@ -18,10 +18,10 @@ for char in text:
             first = ord('A')
         else:
             first = ord('a')
-          # Make correction.
+          # Make correction
         code -= first
         code %= 26
-        # convert bact to character
+        # convert bact to char
         cipher += chr(first + code)
     else:
         # if not a letter leave it untouched as it
