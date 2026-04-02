@@ -13,7 +13,7 @@ for char in text:
     if char.isalpha():
         # Shift its code.
         code = ord(char) + shift
-        # Find the code of the first letter (upper- or lower-case)
+        # Find the code of the first letter (upper or lower-case)
         if char.isupper():
             first = ord('A')
         else:
@@ -24,7 +24,7 @@ for char in text:
         # convert bact to char
         cipher += chr(first + code)
     else:
-        # if not a letter leave it untouched as it
+        #  not a letter leave it untouched as it
         cipher += char
 
 print(cipher)
