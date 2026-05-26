@@ -3,7 +3,6 @@ def checkset(digs):
     digits = [char for char in digs if char.isdigit() and char != '0']
     return len(set(digits)) == 9 and len(digits) == 9
 
-
 rows = []
 for r in range(9):
     ok = False
