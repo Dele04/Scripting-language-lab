@@ -6,7 +6,7 @@ class Animal:
         return "Some generic animal sound"
 
     def __str__(self):
-        return f"Animal Name: {self.name}"
+        return "Animal Name: {self.name}"
 
 
 class Dog(Animal):
@@ -15,7 +15,7 @@ class Dog(Animal):
         self.breed = breed
 
     def make_sound(self):
-        return "Woof!"
+        return "Woof"
 
     def __str__(self):
         return f"{self.name} is a {self.breed}"
@@ -32,7 +32,7 @@ class ServiceDog(Dog):
 
 pet1 = Dog("Buddy", "Bull dog")
 pet2 = Dog("Buddy", "German Shepherd")
-helper = ServiceDog("Max", "Labrador", "Guiding")
+helper = ServiceDog("Max", "Rottweiler", "Guiding")
 
 
 print(pet1)
