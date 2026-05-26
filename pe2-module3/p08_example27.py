@@ -1,7 +1,7 @@
 class Activity:
     """A base class representing a physical activity."""
     def log_workout(self) -> str:
-        return "Fitness Tracker -> "
+        return "Fitness Tracker"
 
 class Running(Activity):
     """Calculates calories burned based on duration and speed."""
