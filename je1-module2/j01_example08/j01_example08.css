@@ -1,0 +1,32 @@
+#mySpan {
+    color: darkorange;
+    font-style: italic;
+    font-size: 1.5em;
+    background-color: #fdf6e2;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+#myH2 {
+    color: darkslategray;
+    border-bottom: 2px solid darkslategray;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.ourDivs {
+    color: teal;
+    background-color: #e6f2f2;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid teal;
+}
+
+.errorDivs {
+    color: crimson;
+    background-color: #fdf2f2;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid crimson;
+    font-weight: bold;
+}

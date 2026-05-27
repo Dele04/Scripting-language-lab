@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Feedback</title>
+    <script src="j01_review_system.js"></script>
+    <link rel="stylesheet" href="j01_review_system.css">
+</head>
+<body>
+
+<h2 id="pageHeading">Submit Your Review</h2>
+
+currentStatus:
+<div id="statusDisplay" class="statusBoxes">No action taken yet</div>
+<br/>
+<button onclick="toggleStatus()">Toggle Status</button>
+<br/><br/>
+
+<label for="productCode">Product Code</label>
+<input type="text" id="productCode" name="productCode">
+<button onclick="saveProductAndDisplay()">Save product and show details</button>
+<br/><br/>
+savedProductDisplay: <div id="productDisplay" class="statusBoxes">No product entered</div>
+
+<br/><br/>
+
+<div id="ratingErrorMsg" class="alertDivs"></div>
+<label for="starRating">Rating (1-5)</label>
+<input type="text" id="starRating" name="starRating" onchange="checkRatingValidity()">
+<button onclick="submitRatingToDisplay()">Submit rating and show details</button>
+<br/><br/>
+submittedRatingDisplay: <div id="ratingDisplay" class="statusBoxes">No rating submitted</div>
+
+</body>
+</html>
