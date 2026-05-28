@@ -99,8 +99,6 @@ function sortContacts(contactList, key) {
     return true;
 }
 
-
-
 // Main loop for continuous user interaction
 let running = true;
 let choice;
