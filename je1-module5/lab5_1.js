@@ -37,13 +37,74 @@ function addNewContact(contactList, name, phone, email) {
     }
 }
 
-contacts.sort(function (a, b) {
-    let retVal = 0;
-    if (a.name > b.name) {
-        retVal = 1;
-    } else if (a.name < b.name) {
-        retVal = -1;
-    }
-    return retVal;
-});
 
+function manageContacts() {
+    choice = readlineSync.question("What do you want to do? (first/last/all/new/sort/quit): ");
+
+    switch (choice.toLowerCase()) {
+        case "first":
+        case "last":
+        case "all":
+            showContact(choice);
+            break;
+        case "new":
+            addContact();
+            break;
+        case "sort":
+            console.log("You chose to sort contacts.");
+            break;
+
+        case "quit":
+            console.log("Exiting program.");
+            break;
+        default:
+            console.log("Invalid choice. Please enter 'first', 'last', 'all', 'new', 'sort' or 'quit'");
+    }
+}
+
+function sortContacts(contactList, key) {
+    if (!(contactList instanceof Array)) {
+        console.log("Error: The first argument must be an array of contacts.");
+        return false;
+    }
+
+    if (contactList.length === 0) {
+        console.log("No contacts to sort.");
+        return true; // Still a success, just nothing to sort
+    }
+
+    // Define a valid set of keys
+    const validKeys = ['name', 'phone', 'email'];
+    if (!validKeys.includes(key)) {
+        console.log(`Error: Invalid sort key. Please choose from ${validKeys.join(', ')}.`);
+        return false;
+    }
+
+    // Use the sort method with a custom comparison function
+    contactList.sort((a, b) => {
+        // Lowercase for case-insensitive comparison and ensure it's a string and handle undefined/null
+        const valA = String(a[key] || '').toLowerCase();
+        const valB = String(b[key] || '').toLowerCase();
+
+        if (valA < valB) {
+            return -1; // a comes before b
+        }
+        if (valA > valB) {
+            return 1; // a comes after b
+        }
+        return 0; // a and b are equal
+    });
+
+    console.log(`Contacts sorted by ${key}.`);
+    return true;
+}
+
+
+
+// Main loop for continuous user interaction
+let running = true;
+let choice;
+while (running) {
+    manageContacts();
+    running = choice.toLowerCase() !== "quit";
+}
