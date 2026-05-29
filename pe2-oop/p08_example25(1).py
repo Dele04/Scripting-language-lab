@@ -30,9 +30,9 @@ class ServiceDog(Dog):
         # Uses super() to get the string from Dog and adds the task
         return f"{super().__str__()} and is trained for: {self.task}"
 
-pet1 = Dog("Buddy", "Bull dog")
-pet2 = Dog("Buddy", "German Shepherd")
-helper = ServiceDog("Max", "Rottweiler", "Guiding")
+pet1 = Dog("Tiny", "Bull dog")
+pet2 = Dog("Paty", "German Shepherd")
+helper = ServiceDog("Jack", "Rottweiler", "Guiding")
 
 
 print(pet1)
